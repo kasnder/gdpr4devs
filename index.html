@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Guide to GDPR</title>
+  <meta name="description" content="A Cheat Sheet for App Developers">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+  <link rel="stylesheet" href="/apps-gdpr-guide/assets/css/main.css">
+  <link rel="stylesheet" href="/apps-gdpr-guide/assets/css/add.css">
+  <link rel="shortcut icon" type="image/png" href="/apps-gdpr-guide/assets/favicon.png" >
+</head>
+
+  <body>
+      <div id="particles-js">
+  <div class="header">
+      <h1>
+        <span class="site-title">Guide to GDPR</span>
+        <span class="site-description">A Cheat Sheet for App Developers</span>
+      </h1>
+      <div class="header-icons">
+        <a aria-label="Send email" href="mailto:gdpr@kollnig.net"><i class="icon fa fa-envelope"></i></a>
+        <a aria-label="Github" target="_blank" href="https://github.com/kasnder/app-dev-privacy-guidelines"><i class="icon fa fa-github-alt"></i></a>
+        <a aria-label="PDF" target="_blank" href="https://kasnder.github.io/apps-gdpr-guide/pdf/guidelines.pdf"><i class="icon fa fa-file-pdf-o"></i></a>
+      </div>
+      <div class="header-links">
+        <!-- <a class="link" href="#about" data-scroll>About Me</a> -->
+      </div>
+  </div>
+  <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+</div>
+
+      <section id="about" class="dont-break-out">
+        <p style="color:gray; font-size: 80%; text-align: center;"><strong>This is no legal advice, but only an app developer’s endeavour to make data protection more approachable.</strong></p>
+
+<p>If you have app users from the European Union, you are responsible for
+all personal data collected through your app. Personal data means all
+data that relates to individuals. This may even include user identifiers
+and IP addresses. Also “anonymous” data or device data can qualify as
+personal data, if it can be related to individuals, and you must protect
+it. You are responsible for any personal data collected on behalf of
+third-parties, such as advertising, analytics, or crash reporting
+services.</p>
+
+<p><strong>Risk evaluation and record keeping.</strong>
+GDPR acknowledges that there
+will never be full protection of personal data. Instead, it encourages a
+risk-based approach, that is, seriously analysing the possible risks to
+data protection. If you can prove that you took all reasonable measures,
+there is no need to be overly afraid of high penalties. Make sure that
+you can provide such proof, by <em>keeping records of all data protection
+considerations and actions</em>.</p>
+
+<p><strong>Handling user requests.</strong>
+The GDPR entitles users to manage (e.g.
+access, delete, correct) any data about them. You can implement these
+user rights directly in software, which would show your efforts towards
+GDPR compliance. Yet, taking requests via email seriously is just as
+fine. You have one month to respond to user requests.</p>
+
+<p><strong>Reasonable data collection.</strong></p>
+<ul>
+  <li>You and your third-parties may only collect personal data
+reasonably, that is, restricted to what is necessary for service
+provision.</li>
+  <li><em>iOS:</em> Always ask for user consent, before you or your third-parties
+collect <em>any data</em>, even if not related to the user.<br />
+<em>Android:</em> If you process sensitive data (e.g. health-related), or
+process data in unexpected ways, do tell the user in a clear manner
+and ask for his <em>consent</em> (no pre-ticked boxes allowed).</li>
+  <li>At best, use at most one third-party service for one purpose, that
+is, at most one advertising, analytics, and crash reporting service.</li>
+  <li>Check with every app release, if you can remove any third-party
+services.</li>
+  <li>Verify the default settings of your third-party services (on-device
+and server-wise), since third-parties have an interest in collecting
+ever more data. Only activate third-party services, once user
+consent is established.</li>
+  <li>If your app is aimed at <em>children</em>, do not employ any third-party
+services.</li>
+</ul>
+
+<p><strong>Always provide a privacy policy.</strong> Provide a privacy policy on the app
+store and within the app. You may want to use one of the privacy policy
+generators, such as <a href="iubenda.com">iubenda.com</a>. Make sure it discloses
+the data collection of you and your third-parties adequately.</p>
+
+<p><strong>Security measures and data breaches.</strong> Take the standard measures for
+security, such as HTTPS communications, salted passwords, validation of
+user inputs. Apple<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> and Google<sup id="fnref:3"><a href="#fn:3" class="footnote">2</a></sup> provide comprehensive guidance
+on this. Try to remove identifiable information whenever possible,
+through pseudonymisation or anonymisation. If you experience a <em>personal
+data breach</em>, you must notify the data protection authority<sup id="fnref:4"><a href="#fn:4" class="footnote">3</a></sup>
+within 72 hours, plus the individuals in case of high risk.</p>
+
+<p><strong>Consent for third-party services.</strong> If you use third-party services,
+the user must be asked for consent in almost all circumstances. This
+consent must be sought before the third-party service is activated and
+begins to share data. Beyond consent,
+the Appendix below provides more detail on
+the correct implementation of the most widely used third-party services.</p>
+
+<p><strong>Closing remarks.</strong> By implementing these measures, you should come an
+important step closer to compliance with GDPR. Additionally, you should
+consult the guidelines of an EU data protection authority. The British
+Data Protection Authority, called ICO, provides excellent guidance<sup id="fnref:5"><a href="#fn:5" class="footnote">4</a></sup>
+on data protection.</p>
+
+<h1 id="appendix-using-third-party-services">Appendix: Using Third-Party Services</h1>
+
+<p>Implementation guidance for the most commonly used third-party services, as well as links to their GDPR guidelines.</p>
+
+<h3 id="adjust">Adjust</h3>
+<p>Once the Adjust SDK is enabled in your app, data sharing takes place,
+notably of device events. User consent should be established before
+enabling this SDK. It stands out that Adjust integrates the GDPR <em>right
+to deletion</em> into their SDK. This could be implemented in your app, to
+show your efforts to comply with GDPR.</p>
+
+<p><em>More info:</em>
+<a href="https://github.com/adjust/sdks">https://github.com/adjust/sdks</a></p>
+
+<h3 id="applovin">AppLovin</h3>
+<p>For EU users, AppLovin requires consent to be passed on
+programmatically. If consent is given, the Advertising ID and IP address
+will be sent to advertising partners, otherwise only a country code.
+Once loaded at runtime, AppLovin automatically receives the information
+that the app was installed.</p>
+
+<p><em>More info:</em>
+<a href="https://www.applovin.com/gdprfaqs/">https://www.applovin.com/gdprfaqs/</a></p>
+
+<h3 id="appsflyer">AppsFlyer</h3>
+<p>The service collects the Advertising ID and a unique AppsFlyer user ID
+from the first app start. User consent should be established before
+activating this service. If the Advertising ID cannot be accessed,
+permanent identifiers, notably the device’s IMEI, are shared with
+AppsFlyer, unless programmatically disabled. Such permanent identifiers
+are highly critical from a data protection standpoint. This practice
+should be communicated transparently to the user, if not disabled.</p>
+
+<p><em>More info:</em>
+<a href="https://support.appsflyer.com/hc/en-us/articles/360001422989">https://support.appsflyer.com/hc/en-us/articles/360001422989</a>.</p>
+
+<h3 id="facebook-sdk">Facebook SDK</h3>
+<p>From the first app start, the Facebook SDK collects device information
+and events (app installation, app start, in-app purchases), unless
+programmatically disabled. User consent should be established before
+activating this SDK. Facebook serves no advertising, if the user limits
+interest-based ads from the device settings.</p>
+
+<p><em>More info:</em>
+<a href="https://developers.facebook.com/docs/app-events/best-practices/gdpr-compliance">https://developers.facebook.com/docs/app-events/best-practices/gdpr-compliance</a></p>
+
+<h3 id="flurry">Flurry</h3>
+<p>For ads, this service provides a complicated mechanism to establish a
+user consent. Since legally required for many advertising services, you
+may want to consider easier, alternative approaches to establish valid
+user consent. Unless programmatically disabled, the user location is
+collected for analytics purposes, if the app has the permission to
+retrieve such. This is highly invasive and may violate GDPR. At very
+least, this practice should be disclosed to the user transparently, if
+not disabled. Generally, user consent should be established before
+activating this service.</p>
+
+<p><em>More info (Analytics):</em>
+<a href="https://developer.yahoo.com/flurry/docs/analytics/gdpr/summary">https://developer.yahoo.com/flurry/docs/analytics/gdpr/summary</a></p>
+
+<p><em>More
+info (Ads):</em> <a href="https://developer.yahoo.com/flurry/docs/publisher/gdpr/">https://developer.yahoo.com/flurry/docs/publisher/gdpr/</a></p>
+
+<h3 id="google-admob">Google AdMob</h3>
+<p>This service serves personalised advertising by default, violating
+Google’s policies if used in the EU. This must be changed by the
+developer, such that user consent is established prior to serving
+personalised ads. AdMob shares device statistics and events with Google
+from the first app start, unless programmatically changed. User consent
+should be established before activating this service.</p>
+
+<p><em>More info:</em>
+<a href="https://developers.google.com/admob/android/eu-consent#forward_consent_to_the_google_mobile_ads_sdk">https://developers.google.com/admob/android/eu-consent#forward_consent_to_the_google_mobile_ads_sdk</a>.</p>
+
+<h3 id="google-analytics">Google Analytics</h3>
+<p>User opt-out and IP anonymisation are supported programmatically and
+their implementation should be considered. User consent should be
+established before using this service.</p>
+
+<p><em>More info:</em>
+<a href="https://developers.google.com/analytics/devguides/collection/android/v4/advanced">https://developers.google.com/analytics/devguides/collection/android/v4/advanced</a></p>
+
+<h3 id="google-chrashlytics">Google Chrashlytics</h3>
+<p>This service shares crash reports with Google from the first app start,
+unless changed by the developer. User consent should be established
+before activating this service.</p>
+
+<p><em>More info:</em>
+<a href="https://firebase.google.com/docs/crashlytics/customize-crash-reports#enable_opt-in_reporting">https://firebase.google.com/docs/crashlytics/customize-crash-reports#enable_opt-in_reporting</a></p>
+
+<h3 id="google-doubleclick">Google DoubleClick</h3>
+<p>This service serves personalised advertising by default, violating
+Google’s policies if used in the EU. User consent should be established
+before activating this service.</p>
+
+<p><em>More info:</em>
+<a href="https://developers.google.com/ad-manager/mobile-ads-sdk/android/eu-consent#forward_consent_to_the_google_mobile_ads_sdk">https://developers.google.com/ad-manager/mobile-ads-sdk/android/eu-consent#forward_consent_to_the_google_mobile_ads_sdk</a>.</p>
+
+<h3 id="google-firebase-analytics">Google Firebase Analytics</h3>
+<p>This service collects device statistics from the first app start, unless
+changed by the developer. The collected data includes the Google
+Advertising ID, unless programmatically disabled, and may be used for
+advertising purposes under certain circumstances. User consent should be
+established before activating this service.</p>
+
+<p><em>More info:</em>
+<a href="https://firebase.google.com/docs/analytics/configure-data-collection">https://firebase.google.com/docs/analytics/configure-data-collection</a></p>
+
+<h3 id="inmobi">Inmobi</h3>
+<p>The Inmobi SDK only collects personal data, if you explicitly indicate
+to the SDK that user consent was established. If no consent is given,
+unpersonalised ads are shown to the user. Inmobi encourages you to
+provide data about location and demographics for higher revenue, if you
+programmatically pass on this information. Such sensitive data
+collection should be transparently disclosed to the user, if not
+refrained from.</p>
+
+<p><em>More info:</em>
+<a href="https://support.inmobi.com/monetize/faqs/gdpr-guide-for-publishers/">https://support.inmobi.com/monetize/faqs/gdpr-guide-for-publishers/</a></p>
+
+<h3 id="mopub">MoPub</h3>
+<p>For increased advertising revenue, MoPub shares data with two other
+services, IAS and Moat, unless programmatically disabled. These services
+must be transparently communicated to the user, if not disabled. User
+consent should be established before activating this service.</p>
+
+<p><em>More info:</em>
+<a href="https://developers.mopub.com/publishers/best-practices/gdpr-guide/">https://developers.mopub.com/publishers/best-practices/gdpr-guide/</a></p>
+
+<h3 id="unity-ads">Unity Ads</h3>
+<p>Unity automatically asks for user consent, unless a special arrangement
+is reached with Unity. Personal data is only collected if the user
+consents. When ads are served, Unity provides the user with a “privacy
+icon”, to change his opt-out setting. If the user opts-out, all
+collected data is deleted.</p>
+
+<p><em>More info:</em>
+<a href="https://unity3d.com/de/legal/gdpr">https://unity3d.com/de/legal/gdpr</a></p>
+
+<h1 id="background">Background</h1>
+
+<p>My MSc thesis in Computer Science, supervised by Max van Kleek (University of Oxford), analysed a large range of documents, that an app
+developer must consider for data protection under GDPR.
+This analysis resulted in a set of developer guidelines.</p>
+
+<p>These guidelines are shared, in the hope that some app developers might find them useful.
+Instead of providing a lengthly legal document, these guidelines represent the <em>personal view of an app developer</em>.
+They are by no means exaustive, complete, nor proven in court.
+Please don’t sue me.</p>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a href="https://developer.apple.com/documentation/security">https://developer.apple.com/documentation/security</a> <a href="https://developer.apple.com/library/archive/documentation/Security/Conceptual/SecureCodingGuide">https://developer.apple.com/library/archive/documentation/Security/Conceptual/SecureCodingGuide</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="https://developer.android.com/training/articles/security-tips">https://developer.android.com/training/articles/security-tips</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p><a href="https://edpb.europa.eu/about-edpb/board/members">https://edpb.europa.eu/about-edpb/board/members</a> <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p><a href="https://ico.org.uk/for-organisations/">https://ico.org.uk/for-organisations/</a> <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+      </section>
+      <footer class="footer">
+    <p>Konrad Kollnig 2019 | <a href="https://kollnig.net/datenschutz.html">Privacy</a> | <a href="https://kollnig.net/impressum.html">Impress</a></p>
+</footer>
+<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/apps-gdpr-guide/assets/js/sweet-scroll.min.js"></script>
+<script src="/apps-gdpr-guide/assets/js/main.js"></script>
+
+  </body>
+</html>
