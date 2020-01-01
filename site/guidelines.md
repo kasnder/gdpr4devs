@@ -53,10 +53,10 @@ the data collection of you and your third-parties adequately.
 
 **Security measures and data breaches.** Take the standard measures for
 security, such as HTTPS communications, salted passwords, validation of
-user inputs. Apple[^1] and Google[^3] provide comprehensive guidance
+user inputs. Apple ([here](https://developer.apple.com/documentation/security) and [here](https://developer.apple.com/library/archive/documentation/Security/Conceptual/SecureCodingGuide)) and [Google](https://developer.android.com/training/articles/security-tips) provide comprehensive guidance
 on this. Try to remove identifiable information whenever possible,
 through pseudonymisation or anonymisation. If you experience a *personal
-data breach*, you must notify the data protection authority[^4]
+data breach*, you must notify [the data protection authority](https://edpb.europa.eu/about-edpb/board/members)
 within 72 hours, plus the individuals in case of high risk.
 
 **Consent for third-party services.** If you use third-party services,
@@ -69,13 +69,6 @@ the correct implementation of the most widely used third-party services.
 **Closing remarks.** By implementing these measures, you should come an
 important step closer to compliance with GDPR. Additionally, you should
 consult the guidelines of an EU data protection authority. The British
-Data Protection Authority, called ICO, provides excellent guidance[^5]
+Data Protection Authority, called ICO, provides [excellent guidance](https://ico.org.uk/for-organisations/)
 on data protection.
 
-[^1]: <https://developer.apple.com/documentation/security> <https://developer.apple.com/library/archive/documentation/Security/Conceptual/SecureCodingGuide>
-
-[^3]: <https://developer.android.com/training/articles/security-tips>
-
-[^4]: <https://edpb.europa.eu/about-edpb/board/members>
-
-[^5]: <https://ico.org.uk/for-organisations/>
