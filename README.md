@@ -11,7 +11,7 @@ Please don't sue me.
 
 ## Download
 
-**Find the guidelines [as pdf](https://gdpr4devs.com/guidelines.pdf).**
+**Download the guidelines [as pdf](https://gdpr4devs.com/guidelines.pdf) or visit [the website](https://gdpr4devs.com/).**
 
 The guidelines comprise 2 pages, and an appendix on third-party services.
 
