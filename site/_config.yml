@@ -1,11 +1,11 @@
 # Site settings
 title: An App Developer's Guide to GDPR
 description: A Cheat Sheet for App Developers
-baseurl: "/apps-gdpr-guide" # the subpath of your site, e.g. /blog
-url: "kasnder.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+#baseurl: "/apps-gdpr-guide" # the subpath of your site, e.g. /blog
+url: "gdpr4devs.com" # the base hostname & protocol for your site
 
 email: gdpr@kollnig.net
 github_page: https://github.com/kasnder/apps-gdpr-guide
-pdf_file: https://kasnder.github.io/apps-gdpr-guide/pdf/guidelines.pdf
+pdf_file: https://gdpr4devs.com/guidelines.pdf
 
 exclude: ['background.md', 'guidelines.md', 'services.md', 'Gemfile*', 'src' , 'node_modules']

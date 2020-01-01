@@ -11,16 +11,16 @@ Please don't sue me.
 
 ## Download
 
-**Find the guidelines [as pdf](https://kasnder.github.io/apps-gdpr-guide/pdf/guidelines.pdf).**
+**Find the guidelines [as pdf](https://gdpr4devs.com/guidelines.pdf).**
 
 The guidelines comprise 2 pages, and an appendix on third-party services.
 
 ## Self-Certification
 
-To signify compliance with these guidelines, an app developer may use the [provided logo](https://github.com/kasnder/app-dev-privacy-guidelines/blob/master/certificate/certificate.png).
+To signify compliance with these guidelines, an app developer may use the [provided logo](https://github.com/kasnder/app-dev-privacy-guidelines/blob/master/certification/certificate.png).
 
 <p align="center">
-  <img alt="Certifcate" src="certificate/certificate.png" style="display: block; margin: 0 auto;" height="100%" width="200" >
+  <img alt="Certifcate" src="certification/certificate.png" style="display: block; margin: 0 auto;" height="100%" width="200" >
 </p>
 
 ## Methodology
