@@ -82,7 +82,7 @@ Regarding security, Apple and Google provide support
 documents, that shall be linked.
 
 ## References
-- European Parliament and Council: "Regulation 2016/679 (General Data Protection Regulation)""
+- European Parliament and Council: "Regulation 2016/679 (General Data Protection Regulation)"
 - Article 29 Data Protection Working Party: "Opinion 02/2013 on apps on smart devices"
 - Google LLC: "Google Play Developer Distribution Agreement" (version 15 April 2019)
 - Google LLC: "Google Play Developer Program Policies" (accessed 20 June 2019)

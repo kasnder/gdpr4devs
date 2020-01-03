@@ -1,6 +1,6 @@
 # Site settings
-title: An App Developer's Guide to GDPR
-description: A Cheat Sheet for App Developers
+title: Guide to GDPR for App Developers
+description: Authored by an App Developer
 #baseurl: "/apps-gdpr-guide" # the subpath of your site, e.g. /blog
 url: "gdpr4devs.com" # the base hostname & protocol for your site
 

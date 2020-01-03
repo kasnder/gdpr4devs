@@ -1,6 +1,3 @@
-**This is no legal advice, but only an app developer's endeavour to make data protection more approachable.**
-{: style="color:gray; font-size: 80%; text-align: center;"}
-
 If you have app users from the European Union, you are responsible for
 all personal data collected through your app. Personal data means all
 data that relates to individuals. This may even include user identifiers
@@ -48,12 +45,13 @@ fine. You have one month to respond to user requests.
 
 **Always provide a privacy policy.** Provide a privacy policy on the app
 store and within the app. You may want to use one of the privacy policy
-generators, such as [iubenda.com](iubenda.com). Make sure it discloses
+generators, such as [iubenda.com](iubenda.com){:target="_blank"}.
+Make sure it discloses
 the data collection of you and your third-parties adequately.
 
 **Security measures and data breaches.** Take the standard measures for
 security, such as HTTPS communications, salted passwords, validation of
-user inputs. Apple ([here](https://developer.apple.com/documentation/security) and [here](https://developer.apple.com/library/archive/documentation/Security/Conceptual/SecureCodingGuide)) and [Google](https://developer.android.com/training/articles/security-tips) provide comprehensive guidance
+user inputs. Apple ([here](https://developer.apple.com/documentation/security){:target="_blank"} and [here](https://developer.apple.com/library/archive/documentation/Security/Conceptual/SecureCodingGuide){:target="_blank"}) and [Google](https://developer.android.com/training/articles/security-tips){:target="_blank"} provide comprehensive guidance
 on this. Try to remove identifiable information whenever possible,
 through pseudonymisation or anonymisation. If you experience a *personal
 data breach*, you must notify [the data protection authority](https://edpb.europa.eu/about-edpb/board/members)
@@ -69,6 +67,6 @@ the correct implementation of the most widely used third-party services.
 **Closing remarks.** By implementing these measures, you should come an
 important step closer to compliance with GDPR. Additionally, you should
 consult the guidelines of an EU data protection authority. The British
-Data Protection Authority, called ICO, provides [excellent guidance](https://ico.org.uk/for-organisations/)
+Data Protection Authority, called ICO, provides [excellent guidance](https://ico.org.uk/for-organisations/){:target="_blank"}
 on data protection.
 

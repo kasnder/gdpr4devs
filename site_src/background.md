@@ -6,3 +6,5 @@ These guidelines are shared, in the hope that some app developers might find the
 Instead of providing a lengthly legal document, these guidelines represent the *personal view of an app developer*.
 They are by no means exaustive, complete, nor proven in court.
 Please don't sue me.
+
+Learn more about how the guidelines were designed [here](https://github.com/kasnder/gdpr4devs/).
