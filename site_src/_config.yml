@@ -5,7 +5,7 @@ description: Authored by an App Developer
 url: "gdpr4devs.com" # the base hostname & protocol for your site
 
 email: gdpr@kollnig.net
-github_page: https://github.com/kasnder/apps-gdpr-guide
+github_page: https://github.com/kasnder/gdpr4devs
 pdf_file: https://gdpr4devs.com/guidelines.pdf
 
 exclude: ['background.md', 'guidelines.md', 'services.md', 'Gemfile*', 'src' , 'node_modules']
