@@ -7,7 +7,7 @@ No legal advice, only an app developer's attempt to make data protection more un
 
 **Dear app developer,**
 
-The following shall very briefly summarise *your obligations* under EU Data Protection Legislation (GDPR) when sharing apps *in non-legal terms*.
+The following shall briefly summarise *your obligations* under EU Data Protection Legislation (GDPR) when sharing apps *in non-legal terms*.
 
 {% include_relative guidelines.md %}
 

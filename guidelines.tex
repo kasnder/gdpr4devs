@@ -30,62 +30,58 @@ GDPR},hidelinks,hyperfootnotes=false,bookmarksopen=true]{hyperref}
 
 \begin{document}
 	\title{An App Developer's Guide to GDPR}
-	\subtitle{Created under the supervision of Max van Kleek}
 	\author{Konrad Kollnig}
-	\date{\today}
+	\date{Version: \today}
 	\maketitle
 	
-	If you have app users from the European Union, you are responsible for 
-	all 
-	personal data collected through your app.
-	Personal data means all data that relates to individuals.
-	This may even include user identifiers and IP addresses.
-	Also \enquote{anonymous} data or device data can qualify as personal 
-	data, 
-	if it can be related to individuals,
-	and you must protect it.
-	You are responsible for any personal data collected on behalf of 
-	third-parties, such as advertising, analytics, or crash reporting 
+	\begin{center}
+		\emph{No legal advice, only an app developer’s attempt to make 
+		data protection more understandable.}
+	\end{center}
+	
+	If you have app users from the European Union, you are responsible for
+	personal data collected through your app. Personal data is data 
+	relating
+	to individuals. This may include device data, pseudonyms, user
+	identifiers, advertising identifiers, (dynamic) IP addresses, and
+	postcodes, especially in combination with other data. For these 
+	reasons,
+	it is usually not possible to make personal data non-personal.
+	
+	You are also responsible for personal data collected from your app for
+	third-party services, such as advertising, analytics, or crash 
+	reporting
 	services.
 	
-	\textbf{Risk evaluation and record keeping.}
-	GDPR acknowledges that there will never be full protection of personal 
-	data.
-	Instead, it encourages a risk-based approach, that is, seriously 
-	analysing 
-	the possible risks to data protection.
-	If you can prove that you took all reasonable measures, there is no 
-	need 
-	to be overly afraid of high penalties.
-	%For more details, consult information about 
-	%\href{https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/accountability-and-governance/data-protection-impact-assessments/}{\enquote{data
-	% protection impact assessments}}.
+	\textbf{Risk evaluation and documentation.} GDPR acknowledges that 
+	there
+	will never be full protection of personal data. Instead, it encourages 
+	a
+	risk-based approach, that is, seriously analysing the possible risks to
+	data protection and taking appropriate data protection measures. If you
+	can prove that you took all appropriate measures, there is no need to 
+	be
+	overly afraid of high fines.
 	
-	Make sure that you can provide such proof, by \textit{keeping records 
-	of 
-	all data protection considerations and actions}.
+	Make sure that you can provide such proof, by \emph{documenting all 
+	data
+	protection considerations, decisions, and actions}.
 	
-	\textbf{Handling user requests.}
-	The GDPR entitles users to manage (e.g. access, delete, correct) any 
-	data 
-	about them.
-	You can implement these user rights directly in software, which would 
-	show 
-	your efforts towards GDPR compliance.
-	Yet, taking requests via email seriously is just as fine.
-	You have one month to respond to user requests.
+	\textbf{Reasonable data collection.} You and your third-parties may 
+	only
+	collect personal data reasonably, that is, only for the
+	purposes stated in your privacy policy (purpose limitation) and 
+	restricted to what is necessary for the stated purposes (data 
+	minimisation).
 	
-	\textbf{Reasonable data collection.}
+	Furthermore:
 	\begin{itemize}
-		\item You and your third-parties may only collect personal data 
-		reasonably, that is, restricted to what is necessary for service 
-		provision.	
 		\item
-		\textit{iOS:} Always ask for user consent, before you or your 
-		third-parties collect \textit{any data}, even if not related to 
-		the 
-		user.\\	
-		\textit{Android:} If you process sensitive data (e.g. 
+		\textit{iOS:} According the Apple's terms, you should ask
+		for user consent, before you or your third-parties collect 
+		\emph{any data}, no matter if personal and non-personal.\\	
+		\textit{Android:}  According
+		to Google's terms, if you process sensitive data (e.g. 
 		health-related), 
 		or process data in unexpected ways, do tell the user in a clear 
 		manner 
@@ -94,17 +90,18 @@ GDPR},hidelinks,hyperfootnotes=false,bookmarksopen=true]{hyperref}
 		purpose, 
 		that is, at most one advertising, analytics, and crash reporting 
 		service.
-		\item Check with every app release, if you can remove any 
-		third-party 
-		services.
+		\item Check with every app release, if you can reduce data 
+		collection or remove any third-party services.
 		\item Verify the default settings of your third-party services 
 		(on-device and server-wise), since third-parties have an interest 
 		in 
 		collecting ever more data.
 		Only activate third-party services, once user consent is 
-		established.
+		established. More information can be
+		found in the Appendix below.
 		\item If your app is aimed at \textit{children}, do not employ any 
-		third-party services.
+		third-party services. It's not good practice, and a
+		violation of Apple's terms.
 	\end{itemize}
 	
 	\textbf{Always provide a privacy policy.}
@@ -114,6 +111,15 @@ GDPR},hidelinks,hyperfootnotes=false,bookmarksopen=true]{hyperref}
 	Make sure it discloses the data collection of you and your 
 	third-parties 
 	adequately.
+	
+	\textbf{Handling user requests.}
+	The GDPR entitles users to manage
+	(e.g.~access, delete, correct) any data about them. You can implement
+	these user rights directly in software, which would show your efforts
+	towards GDPR compliance. Yet, taking requests via email seriously is
+	just as fine. You have one month to respond to user requests. This
+	response may either address the request, or, for complex user requests,
+	request an extension for a further 2 months.
 	
 	\textbf{Security measures and data breaches.}
 	Take the standard measures for security, such as HTTPS communications, 
@@ -151,7 +157,7 @@ GDPR},hidelinks,hyperfootnotes=false,bookmarksopen=true]{hyperref}
 	%Include detail about the third-party services in your app's privacy 
 	%policy, just as you would about your own app; the policies of the 
 	%third-party service tell you what to do.
-	Beyond consent, Table~\ref{tab:implementation_guidance_trackers} 
+	Beyond consent, the Appendix
 	provides 
 	more detail on the correct implementation of the most widely used 
 	third-party services.
@@ -167,12 +173,17 @@ GDPR},hidelinks,hyperfootnotes=false,bookmarksopen=true]{hyperref}
 	guidance\footnote{\url{https://ico.org.uk/for-organisations/}} on data 
 	protection.
 	
-	\textbf{Please note that this is no legal advice, but only guidance.}
+	\pagebreak
+	
+	\section*{Appendix: Using Third-Party Services}
+	Implementation guidance for the most commonly used third-party 
+	services, as well as links to their GDPR guidelines.
+	
 	\begin{footnotesize}
 		\begin{longtable}{lp{.65\textwidth}}
-			\caption{Implementation guidance for the most commonly used 
-			third-party services, as well as links to their GDPR 
-			guidelines.}\label{tab:implementation_guidance_trackers} \\
+			%\caption{Implementation guidance for the most commonly used 
+			%third-party services, as well as links to their GDPR 
+			%guidelines.}\label{tab:implementation_guidance_trackers} \\
 			\toprule
 			Service & Implementation Notes \\ 
 			\midrule 
