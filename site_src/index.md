@@ -14,6 +14,7 @@ The following shall briefly summarise *your obligations* under EU Data Protectio
 <div markdown="1" class="appendix">
 ## Sources
 - European Parliament and Council: "Regulation 2016/679 (General Data Protection Regulation)"
+- European Parliament and Council: "Directive 2002/58/EC (Directive on privacy and electronic communications)"
 - Article 29 Data Protection Working Party: "Opinion 02/2013 on apps on smart devices"
 - Google LLC: "Google Play Developer Distribution Agreement" (version 15 April 2019)
 - Google LLC: "Google Play Developer Program Policies" (accessed 20 June 2019)
