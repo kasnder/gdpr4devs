@@ -41,6 +41,7 @@ Furthermore:
     consent is established. More information can be found in the Appendix below.
 -   If your app is aimed at *children*, do not employ any third-party
     services. It's not good practice, and a violation of Apple's terms.
+-   If possible, use libraries that make their source code available. Otherwise, you have no means to verify the underlying data practices.
 
 **Always provide a privacy policy.** Provide a privacy policy on the app
 store and within the app. You may want to use one of the privacy policy
