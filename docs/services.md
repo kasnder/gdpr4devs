@@ -79,7 +79,7 @@ established before using this service.
 *More info:*
 <https://developers.google.com/analytics/devguides/collection/android/v4/advanced>{:target="_blank"}
 
-**Google Chrashlytics**.
+**Google Crashlytics**.
 This service shares crash reports with Google from the first app start,
 unless changed by the developer. User consent should be established
 before activating this service.
