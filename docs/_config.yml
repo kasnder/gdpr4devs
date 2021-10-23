@@ -2,10 +2,10 @@
 title: Guide to GDPR for App Developers
 description: Written by an App Developer
 #baseurl: "/apps-gdpr-guide" # the subpath of your site, e.g. /blog
-url: "gdpr4devs.com" # the base hostname & protocol for your site
+url: "kasnder.github.io/gdpr4devs" # the base hostname & protocol for your site
 
 email: gdpr@kollnig.net
 github_page: https://github.com/kasnder/gdpr4devs
-pdf_file: https://gdpr4devs.com/guidelines.pdf
+pdf_file: https://kasnder.github.io/gdpr4devs/guidelines.pdf
 
 exclude: ['background.md', 'guidelines.md', 'services.md', 'Gemfile*', 'src' , 'node_modules']
