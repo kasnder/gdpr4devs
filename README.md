@@ -11,7 +11,8 @@ Please don't sue me.
 
 ## Download
 
-**Download the guidelines [as pdf](https://gdpr4devs.com/guidelines.pdf) or visit [the website](https://gdpr4devs.com/).**
+**Download the guidelines [as pdf](https://kasnder.github.io/gdpr4devs/guidelines.pdf) or visit [the website](https://kasnder.github.io/gdpr4devs./).**
+
 
 The guidelines comprise 2 pages, and an appendix on third-party services.
 
